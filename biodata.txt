@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bio Data - 2nd Year CSE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 70%;
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 25px 35px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .bio-card p {
+      font-size: 16px;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      background-color: #2980b9;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background-color: #1f6391;
+    }
+
+    #moreInfo {
+      margin-top: 15px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Student Bio Data</h1>
+    <div class="bio-card">
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Age:</strong> 19</p>
+      <p><strong>Gender:</strong> Male</p>
+      <p><strong>Course:</strong> B.Sc Computer Science</p>
+      <p><strong>Year:</strong> 2nd Year</p>
+      <p><strong>University:</strong> ABC University</p>
+
+      <button onclick="toggleMore()">Show More</button>
+
+      <div id="moreInfo" class="hidden">
+        <p><strong>Email:</strong> john.doe@example.com</p>
+        <p><strong>Phone:</strong> +91 9876543210</p>
+        <p><strong>Skills:</strong> HTML, CSS, JavaScript, Python</p>
+        <p><strong>Hobbies:</strong> Coding, Gaming, Reading</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMore() {
+      const info = document.getElementById("moreInfo");
+      const button = document.querySelector("button");
+
+      if (info.classList.contains("hidden")) {
+        info.classList.remove("hidden");
+        button.textContent = "Show Less";
+      } else {
+        info.classList.add("hidden");
+        button.textContent = "Show More";
+      }
+    }
+  </script>
+
+</body>
+</html>
